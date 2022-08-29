@@ -1,0 +1,17 @@
+{
+  "type": "better_cities:city_structure",
+
+  "config": {
+    "start_pool": "better_cities:start_city",
+
+    "size": 1
+  },
+
+  "biomes": "#better_cities:has_structure/city_structure_biomes",
+
+  "adapt_noise": false,
+
+  "spawn_overrides": {
+
+  }
+}
