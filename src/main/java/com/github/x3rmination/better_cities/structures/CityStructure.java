@@ -40,7 +40,6 @@ public class CityStructure extends StructureFeature<JigsawConfiguration> {
     private static boolean isFeatureChunk(PieceGeneratorSupplier.Context<JigsawConfiguration> context) {
         // Grabs the chunk position we are at
         ChunkPos chunkpos = context.chunkPos();
-        System.out.println("Max Section:  " + context.chunkGenerator().getFirstFreeHeight(chunkpos.x, chunkpos.z, Heightmap.Types.WORLD_SURFACE_WG, context.heightAccessor()));
         int height = context.chunkGenerator().getFirstFreeHeight(chunkpos.x, chunkpos.z, Heightmap.Types.WORLD_SURFACE_WG, context.heightAccessor());
         return true;
     }
