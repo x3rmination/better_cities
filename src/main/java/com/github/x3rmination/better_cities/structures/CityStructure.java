@@ -22,7 +22,8 @@ public class CityStructure extends StructureFeature<JigsawConfiguration> {
     public static final Codec<JigsawConfiguration> CODEC = RecordCodecBuilder.create((codec) -> {
         return codec.group(
                 StructureTemplatePool.CODEC.fieldOf("start_pool").forGetter(JigsawConfiguration::startPool),
-                Codec.intRange(0, 10).fieldOf("size").forGetter(JigsawConfiguration::maxDepth)
+                Codec.intRange(1, 30).fieldOf("size").forGetter(JigsawConfiguration::maxDepth)
+//                Codec.unit(10).fieldOf("size").forGetter(JigsawConfiguration::maxDepth)
         ).apply(codec, JigsawConfiguration::new);
     });
 
@@ -80,7 +81,6 @@ public class CityStructure extends StructureFeature<JigsawConfiguration> {
          * An example of a custom JigsawPlacement.addPieces in action can be found here (warning, it is using Mojmap mappings):
          * https://github.com/TelepathicGrunt/RepurposedStructures/blob/1.18.2/src/main/java/com/telepathicgrunt/repurposedstructures/world/structures/pieces/PieceLimitedJigsawManager.java
          */
-
         return structurePiecesGenerator;
     }
 }

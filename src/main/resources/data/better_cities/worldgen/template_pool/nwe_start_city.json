@@ -1,5 +1,4 @@
 {
-
   "name": "better_cities:start_city",
 
   "fallback": "minecraft:empty",
@@ -9,7 +8,7 @@
       "weight": 1,
       "element": {
 
-        "location": "better_cities:single_0",
+        "location": "better_cities:nwe_town_square",
 
         "processors": "minecraft:empty",
 
