@@ -41,7 +41,7 @@ public class CityStructure extends StructureFeature<JigsawConfiguration> {
         // Grabs the chunk position we are at
         ChunkPos chunkpos = context.chunkPos();
         int height = context.chunkGenerator().getFirstFreeHeight(chunkpos.x, chunkpos.z, Heightmap.Types.WORLD_SURFACE_WG, context.heightAccessor());
-        return true;
+        return height < 90;
     }
 
     public static Optional<PieceGenerator<JigsawConfiguration>> createPiecesGenerator(PieceGeneratorSupplier.Context<JigsawConfiguration> context) {
