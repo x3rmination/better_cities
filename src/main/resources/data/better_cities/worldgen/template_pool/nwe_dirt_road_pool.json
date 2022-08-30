@@ -1,5 +1,5 @@
 {
-  "name": "better_cities:nwe_road_pool",
+  "name": "better_cities:nwe_dirt_road_pool",
 
   "fallback": "minecraft:empty",
 
@@ -9,7 +9,7 @@
       "element": {
         "location": "better_cities:dirt_road/nwe_left4",
         "processors": "minecraft:empty",
-        "projection": "terrain_matching",
+        "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
@@ -18,7 +18,7 @@
       "element": {
         "location": "better_cities:dirt_road/nwe_right4",
         "processors": "minecraft:empty",
-        "projection": "terrain_matching",
+        "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
@@ -27,7 +27,7 @@
       "element": {
         "location": "better_cities:dirt_road/nwe_road4",
         "processors": "minecraft:empty",
-        "projection": "terrain_matching",
+        "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
@@ -36,7 +36,7 @@
       "element": {
         "location": "better_cities:dirt_road/nwe_t4",
         "processors": "minecraft:empty",
-        "projection": "terrain_matching",
+        "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
@@ -45,7 +45,7 @@
       "element": {
         "location": "better_cities:dirt_road/nwe_turn4",
         "processors": "minecraft:empty",
-        "projection": "terrain_matching",
+        "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     }
