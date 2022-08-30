@@ -4,7 +4,18 @@
   "_comment": " This biome tag can specify the biome directly. Or specify another biome tag by starting with # ",
   "values": [
     "#minecraft:is_mountain",
-    "#minecraft:is_ocean",
-        "minecraft:swamp"
+    "minecraft:swamp",
+    "minecraft:birch_forest",
+    "minecraft:plains",
+    "minecraft:taiga",
+    "minecraft:sunflower_plains",
+    "minecraft:forest",
+    "minecraft:flower_forest",
+    "minecraft:birch_forest",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:old_growth_pine_taiga",
+    "minecraft:old_growth_spruce_taiga",
+    "minecraft:meadow",
+    "minecraft:grove"
   ]
 }
