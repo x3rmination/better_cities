@@ -5,6 +5,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.feature.StructureFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.JigsawConfiguration;
 import net.minecraft.world.level.levelgen.structure.BuiltinStructureSets;
@@ -39,10 +40,9 @@ public class CityStructure extends StructureFeature<JigsawConfiguration> {
     private static boolean isFeatureChunk(PieceGeneratorSupplier.Context<JigsawConfiguration> context) {
         // Grabs the chunk position we are at
         ChunkPos chunkpos = context.chunkPos();
-
-        // Checks to make sure our structure does not spawn within 10 chunks of an Ocean Monument
-        // to demonstrate how this method is good for checking extra conditions for spawning
-        return !context.chunkGenerator().hasFeatureChunkInRange(BuiltinStructureSets.OCEAN_MONUMENTS, context.seed(), chunkpos.x, chunkpos.z, 10);
+        System.out.println("Max Section:  " + context.chunkGenerator().getFirstFreeHeight(chunkpos.x, chunkpos.z, Heightmap.Types.WORLD_SURFACE_WG, context.heightAccessor()));
+        int height = context.chunkGenerator().getFirstFreeHeight(chunkpos.x, chunkpos.z, Heightmap.Types.WORLD_SURFACE_WG, context.heightAccessor());
+        return true;
     }
 
     public static Optional<PieceGenerator<JigsawConfiguration>> createPiecesGenerator(PieceGeneratorSupplier.Context<JigsawConfiguration> context) {
